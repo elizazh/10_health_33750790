@@ -1,0 +1,291 @@
+/* ==== Base layout & typography ==== */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #fff7fb; /* soft pink background */
+  color: #281c2d;
+}
+
+a {
+  color: #e75480;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Header / nav ==== */
+
+header {
+  background: linear-gradient(90deg, #ff9ac4, #ff6fa3);
+  color: white;
+  padding: 1rem 0 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(230, 70, 130, 0.25);
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+}
+
+header h1 a {
+  color: white;
+}
+
+/* Simple heart-dot logo vibe */
+header h1::after {
+  content: ' \2665';
+  font-size: 0.95rem;
+  color: #ffe4f0;
+}
+
+nav a {
+  margin-left: 0.75rem;
+  color: #ffe4f0;
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.nav-user {
+  margin-left: 0.75rem;
+  font-weight: 500;
+}
+
+/* ==== Main content ==== */
+
+main {
+  padding-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #33152f;
+}
+
+/* Card-style sections like Flo panels */
+section {
+  background: #ffffff;
+  padding: 1.6rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 25px rgba(212, 135, 164, 0.12);
+  border: 1px solid #ffe3f0;
+}
+
+/* ==== Forms ==== */
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  gap: 0.25rem;
+  color: #5a3a5c;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='date'],
+textarea {
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.9rem;
+  border: 1px solid #ffbad5;
+  font-size: 0.95rem;
+  background: #fffafc;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff6fa3;
+  box-shadow: 0 0 0 3px rgba(255, 159, 194, 0.35);
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==== Buttons ==== */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #ff6fa3, #ff4f8b);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(255, 110, 165, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(255, 110, 165, 0.45);
+  filter: brightness(1.02);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #ff6fa3;
+  color: #ff4f8b;
+  font-size: 0.9rem;
+  background: #fff7fb;
+  font-weight: 500;
+  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+}
+
+.btn-secondary:hover {
+  background: #ffe3f0;
+  border-color: #ff4f8b;
+}
+
+/* ==== Feedback messages ==== */
+
+.error {
+  background: #ffe4ea;
+  color: #b4234b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ffb3c6;
+}
+
+.success {
+  background: #e6fffa;
+  color: #047857;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #6ee7b7;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #7b7180;
+}
+
+/* ==== Tables (history/dashboard) ==== */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ffe3f0;
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+}
+
+.data-table th {
+  background: #ffe9f4;
+  color: #5a2048;
+}
+
+/* Zebra rows */
+.data-table tbody tr:nth-child(even) {
+  background: #fff7fb;
+}
+
+/* ==== Search + cards for recipes ==== */
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-form label {
+  flex: 1 1 180px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  padding: 1rem;
+  border: 1px solid #ffe3f0;
+  box-shadow: 0 6px 14px rgba(220, 132, 165, 0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: #341226;
+}
+
+/* Tag pill like Flo labels */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: #ffe8f4;
+  color: #d3346a;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.45rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #7b7180;
+}
+
+/* ==== Footer ==== */
+
+footer {
+  border-top: 1px solid #ffd3e7;
+  padding: 1rem 0 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #7b7180;
+  background: #ffeef7;
+}
