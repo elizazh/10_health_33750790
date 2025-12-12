@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+
+<section class="form-section">
+  <h2>Daily PCOS Check-In</h2>
+  <p>Log how you&apos;re doing today. Over time you can see patterns between sleep, movement, cravings and how you feel.</p>
+
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p class="success"><%= success %></p>
+  <% } %>
+
+  <form method="POST" action="/daily-check-in">
+    <label>
+      Date
+      <input type="date" name="log_date" required />
+    </label>
+
+    <label>
+      Sleep hours
+      <input type="number" step="0.1" name="sleep_hours" min="0" max="24" />
+    </label>
+
+    <label>
+      Movement minutes (intentional activity)
+      <input type="number" name="movement_minutes" min="0" max="600" />
+    </label>
+
+    <label>
+      Mood (0–10)
+      <input type="number" name="mood_score" min="0" max="10" />
+    </label>
+
+    <label>
+      Energy (0–10)
+      <input type="number" name="energy_score" min="0" max="10" />
+    </label>
+
+    <label>
+      Cravings (0–10)
+      <input type="number" name="craving_level" min="0" max="10" />
+    </label>
+
+    <label>
+      Cycle day (optional)
+      <input type="number" name="cycle_day" min="1" max="60" />
+    </label>
+
+    <label>
+      Notes (e.g. symptoms, stress, what you ate)
+      <textarea name="notes" rows="4"></textarea>
+    </label>
+
+    <button type="submit" class="btn">Save check-in</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>
