@@ -1,6 +1,7 @@
-home=http://localhost:8000/
-about=http://localhost:8000/about
-register=http://localhost:8000/register
-login=http://localhost:8000/login
-daily_check_in=http://localhost:8000/daily-check-in
-recipes=http://localhost:8000/recipes
+home=https://www.doc.gold.ac.uk/usr/147/
+about=https://www.doc.gold.ac.uk/usr/147/about
+register=https://www.doc.gold.ac.uk/usr/147/register
+login=https://www.doc.gold.ac.uk/usr/147/login
+daily_check_in=https://www.doc.gold.ac.uk/usr/147/daily-check-in
+recipes=https://www.doc.gold.ac.uk/usr/147/recipes
+stats=https://www.doc.gold.ac.uk/usr/147/stats
