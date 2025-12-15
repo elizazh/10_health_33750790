@@ -38,7 +38,7 @@ How to run locally
 
 5. Visit:
    http://localhost:8000/
-   home=https://www.doc.gold.ac.uk/usr/147/
+   home=https://www.doc.gold.ac.uk/usr/417/
 Demo login
 ----------
 Username: gold
