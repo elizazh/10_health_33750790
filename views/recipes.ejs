@@ -3,7 +3,7 @@
 <section>
   <h2>PCOS-Friendly Recipes</h2>
 
-  <form method="GET" action="/recipes" class="search-form">
+  <form method="GET" action="<%= basePath %>/recipes" class="search-form">
     <label>
       Search recipes
       <input
@@ -16,7 +16,7 @@
     <button type="submit" class="btn">Search</button>
 
     <% if (search) { %>
-      <a class="btn-secondary" href="/recipes">Clear</a>
+      <a class="btn-secondary" href="<%= basePath %>/recipes">Clear</a>
     <% } %>
   </form>
 
@@ -27,13 +27,15 @@
       <% recipes.forEach(r => { %>
         <li class="card">
           <h3><%= r.title %></h3>
+
           <% if (r.main_tag) { %>
             <p class="tag"><%= r.main_tag %></p>
           <% } %>
+
           <p><%= r.summary %></p>
+
           <p class="meta">
-            Prep: <%= r.prep_time_minutes %> mins
-            &middot;
+            Prep: <%= r.prep_time_minutes %> mins &middot;
             Difficulty: <%= r.difficulty %>
           </p>
         </li>
@@ -43,3 +45,4 @@
 </section>
 
 <%- include('partials/footer') %>
+
