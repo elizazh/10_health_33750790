@@ -17,7 +17,9 @@ app.set("views", path.join(__dirname, "views"));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+
+// ✅ IMPORTANT: static files must also be served under the base path
+app.use(BASE_PATH, express.static(path.join(__dirname, "public")));
 
 app.use(
   session({
@@ -35,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 /* =========================
-   ROUTES (ALL UNDER /usr/147)
+   ROUTES (ALL UNDER /usr/417)
    ========================= */
 
 // Home
