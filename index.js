@@ -175,7 +175,7 @@ process.on("unhandledRejection", (err) => console.error("unhandledRejection:", e
 process.on("uncaughtException", (err) => console.error("uncaughtException:", err));
 
 //  listen on IPv4 loopback (Apache proxy usually uses this)
-app.listen(PORT, "127.0.0.1", () => {
-  console.log(`PCOS Lifestyle Coach running on http://127.0.0.1:${PORT}${BASE_PATH}/`);
+app.listen(8000, "::", () => {
+  console.log("Listening on [::]:8000");
 });
 
