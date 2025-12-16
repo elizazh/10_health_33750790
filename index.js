@@ -176,7 +176,6 @@ app.get(`${BASE_PATH}/recipes`, async (req, res) => {
 });
 
 // IMPORTANT: listen on ALL interfaces so doc.gold.ac.uk can reach it
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Running on http://0.0.0.0:${PORT}${BASE_PATH}/`);
+app.listen(PORT, "::", () => {
+  console.log(`Running on http://localhost:${PORT}`);
 });
-EOF
