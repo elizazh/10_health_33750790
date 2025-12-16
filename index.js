@@ -152,7 +152,7 @@ app.get(`${BASE_PATH}/recipes`, async (req, res) => {
   res.render("recipes", { recipes, search });
 });
 
-// Start server (Apache proxy compatible)
-app.listen(PORT, "127.0.0.1", () => {
-  console.log(`Running on http://127.0.0.1:${PORT}`);
+// ✅ Start server (MUST be 0.0.0.0 so Apache can reach it)
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Running on http://0.0.0.0:${PORT}${BASE_PATH}/`);
 });
