@@ -166,7 +166,7 @@ router.get("/recipes", async (req, res) => {
 
   try {
     let recipes;
-    if (search) {
+    if (search) { 
       const like = `%${search}%`;
       [recipes] = await db.query(
         "SELECT * FROM recipes WHERE title LIKE ? OR summary LIKE ? OR main_tag LIKE ?",
